@@ -1,0 +1,50 @@
+/*
+    Quiero modificar todos los elementos p que se encuentran dentro de un elemento con la clase padre
+
+    Cálculo de especificidad
+        => selector de clase (.padre): 10
+        => selector de etiqueta (p): 1
+        => valor: 10 + 1 = 11
+*/
+
+.padre>p {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+/*
+    Cálculo de especificidad
+        => selector de clase (.padre): 10
+        => selector de etiqueta (p): 1
+        => valor: 10 + 1 = 11
+*/
+.padre p {
+    background-color: aqua;
+    color: cornflowerblue;
+}
+
+/*
+    Quiero modificar todos los elementos p que se encuentran dentro de un elemento div
+
+    Cálculo de especificidad
+        => selector de etiqueta (div): 1
+        => selector de etiqueta (p): 1
+        => valor: 1 + 1 = 2
+*/
+div p {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/*
+    Quiero modificar todos los elementos p que se encuentran DIRECTAMENTE dentro de un elemento div
+
+    Cálculo de especificidad
+        => selector de etiqueta (div): 1
+        => selector de etiqueta (p): 1
+        => valor: 1 + 1 = 2
+*/
+div>p {
+    background-color: burlywood;
+    color: chocolate;
+}

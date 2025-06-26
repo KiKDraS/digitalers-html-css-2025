@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalers</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/selector-descendente.css">
+</head>
+<!-- Acomodamos el nombre de la rama al calendario -->
+
+<body>
+    <header>
+        <h1>Clase 08</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Tablas</h2>
+
+            <table>
+                <thead>
+                    <!-- Fila de la tabla -->
+                    <tr>
+                        <!-- Columna del head -->
+                        <th>Logo</th>
+                        <th class="sin-borde-costados">Nombre del Lenguaje</th>
+                        <th>Nivel de habilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Columna de body -->
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2016/11/19/22/25/html5-1841458_640.png" alt="logo"
+                                class="logo">
+                        </td>
+                        <td class="sin-borde-costados">HTML5</td>
+                        <td rowspan="2">Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2016/11/19/23/00/css3-1841590_1280.png" alt="logo"
+                                class="logo">
+                        </td>
+                        <td class="sin-borde-costados">CSS3</td>
+                        <!-- <td>Intermedio</td> -->
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2017/03/30/17/41/javascript-2189147_960_720.png"
+                                alt="logo" class="logo">
+                        </td>
+                        <td colspan="2">Sin datos</td>
+                        <!-- <td>Básico</td> -->
+                    </tr>
+                </tbody>
+                <!-- <tfoot></tfoot> -->
+            </table>
+        </section>
+        <section>
+            <h2>CSS</h2>
+            <h3>Reglas de trabajo</h3>
+            <ul>
+                <li>Herencia</li>
+                <li>Importancia</li>
+                <li>Especificidad</li>
+                <li>*Orden de lectura</li>
+            </ul>
+
+            <h3>Selectores</h3>
+            <ul>
+                <li>Básicos
+                    <ul>
+                        <li>ID (#)</li>
+                        <li>Clase (.)</li>
+                        <li>Etiqueta (nombre-de-la-etiqueta)</li>
+                        <li>Universal (*)</li>
+                    </ul>
+                </li>
+                <li>Compuestos - Calculan su valor de especificidad sumando los valores de los selectores que los
+                    componen
+                    <ul>
+                        <li>Selector grupal (* no modifica especificidad)</li>
+                        <li>Selector descendente
+                            <ul>
+                                <li>Selector de hijo - Un elemento dentro de otro. Sin importar la profundidad del árbol
+                                    genealógico</li>
+                                <li>Selector de hijo directo - Un elemento dentro de otro. Solo debe haber un rango de
+                                    profundidad en el árbol genealógico</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Ejemplos Selector Descendente</h3>
+            <div>
+                <p>
+                    (1)Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, obcaecati mollitia ut
+                    dolorem
+                    ullam temporibus quae maxime commodi recusandae blanditiis, similique ad illum id optio
+                    necessitatibus quam ducimus error distinctio.
+                </p>
+                <section>
+                    <p>
+                        (2)Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores delectus quam
+                        aperiam
+                        sequi corporis repudiandae eligendi atque magnam, aliquam sunt laudantium doloremque fuga?
+                        Aliquid accusamus quasi cum cupiditate debitis!
+                    </p>
+                </section>
+            </div>
+            <div class="padre">
+                <p>
+                    (3)Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, obcaecati mollitia ut
+                    dolorem
+                    ullam temporibus quae maxime commodi recusandae blanditiis, similique ad illum id optio
+                    necessitatibus quam ducimus error distinctio.
+                </p>
+                <section>
+                    <p>
+                        (4)Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores delectus quam
+                        aperiam
+                        sequi corporis repudiandae eligendi atque magnam, aliquam sunt laudantium doloremque fuga?
+                        Aliquid accusamus quasi cum cupiditate debitis!
+                    </p>
+                </section>
+            </div>
+
+            <h4>Especificidad de los selectores</h4>
+            <p>La Especificidad de un Selector es un cálculo que el navegador hace para saber uqé estilo aplicar cuando
+                hay un conflicto. Siempre se aplica el estilo declarado con el Selector de valor más alto</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Clase</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Etiqueta</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Universal</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Box Modeling</h3>
+            <p>Forma de pensar la estructura para realizar los diseños basada en cajas</p>
+            <ul>
+                <li>Propiedades de la caja (cómo se forma la caja)
+                    <ul>
+                        <li>width</li>
+                        <li>height</li>
+                        <li>border</li>
+                        <li>margin</li>
+                        <li>padding</li>
+                    </ul>
+                </li>
+                <li>Forma en que se calcula el espacio ocupado por la caja
+                    <ul>
+                        <li>content-box (por defecto): El espacio final ocupado por la caja es el resultado de la suma
+                            de su contenido, width, padding, margin y border</li>
+                        <li>border-box: El espacio final ocupado por la caja es igual al width</li>
+                    </ul>
+                </li>
+                <li>Características de la caja (tipo de display)
+                    <ul>
+                        <li>Elemento de línea (display: inline)</li>
+                        <li>Elemento de bloque (display: block)</li>
+                        <li>Elemento de línea-bloque (display: inline-block)</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="box-model"></div>
+            <div class="box-model"></div>
+        </section>
+    </main>
+    <footer>
+        <span>&copy; Todos los derechos reservados</span>
+    </footer>
+</body>
+
+</html>
