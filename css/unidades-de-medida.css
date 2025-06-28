@@ -1,0 +1,48 @@
+.porcentaje,
+.vw {
+    height: 150px;
+    background-color: blue;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.porcentaje {
+    width: 50%;
+}
+
+.vw {
+    width: 50vw;
+}
+
+#contenedor {
+    background-color: inherit;
+    border: none;
+    border: 1px solid black;
+    height: 50vh;
+}
+
+#contenedor .contenido {
+    width: 30%;
+}
+
+.rem {
+    font-size: 1.5rem;
+    /*
+        16 * 1rem = 16px
+    */
+}
+
+.image-container {
+    width: 90vw;
+    padding: 16px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    /* width: 50%;
+    max-width: 550px;
+    min-width: 300px; */
+    width: clamp(300px, 50%, 550px);
+}

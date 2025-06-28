@@ -1,0 +1,67 @@
+.contenido {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    border: 1px solid #000;
+    color: aliceblue;
+}
+
+.contenedor,
+.contenedor-column {
+    margin: 16px auto;
+    width: 500px;
+    height: 500px;
+    /*height: auto; Indica que la altura se modifica cuando agregamos contenido
+        -> Si el valor de height es auto. No se puede calcular la distancia
+        que hay que dejar para ubicar los elementos en el centro verticalmente
+        -> Para posicionar los elementos el navegador
+            -> tamaño del contenedor + tamaño del contenido / 2
+    */
+    border: 1px solid #000;
+    display: flex;
+}
+
+.contenedor {
+    /*Valor por defecto - Eje principal es X*/
+    flex-direction: row;
+    /*
+        Posicionar los elementos en el Eje principal
+            -> Podemos dejar espacio entre los elementos
+                -> space-between: Espacio entre los elementos
+                -> space-around: Espacio alrededor de los elementos 
+                -> space-evenly: Espacio entre los elementos y el borde del contenedor
+    */
+    justify-content: space-evenly;
+    /*Posicionar los elementos en el Eje secundario*/
+    align-items: center;
+}
+
+.contenedor-column {
+    /*Eje principal es Y*/
+    flex-direction: column;
+
+    /*
+        Posicionar los elementos en el Eje principal
+            -> Podemos dejar espacio entre los elementos
+                -> space-between: Espacio entre los elementos
+                -> space-around: Espacio alrededor de los elementos 
+                -> space-evenly: Espacio entre los elementos y el borde del contenedor
+    */
+    justify-content: space-evenly;
+    /*Posicionar los elementos en el Eje secundario*/
+    align-items: center;
+}
+
+.contenedor-interno {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.start {
+    align-self: flex-start;
+}
+
+.end {
+    align-self: flex-end;
+}

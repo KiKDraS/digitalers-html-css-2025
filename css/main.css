@@ -4,45 +4,31 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.logo {
-    width: 32px;
-}
-
-table {
-    border-collapse: collapse;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-}
-
-.sin-borde-costados {
-    border-left: none;
-    border-right: none;
-}
-
-th,
-td {
-    border: 1px solid black;
-    padding: 8px;
-}
-
-th {
-    background-color: bisque;
-}
-
-td {
-    border-top: none;
-    background-color: cadetblue;
-    color: aliceblue;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.box-model {
-    background-color: blue;
-    width: 150px;
+.cartel {
     height: 150px;
+    line-height: 150px;
+    background-color: cadetblue;
+    color: #eee;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
+}
+
+.lista {
+    display: flex;
+    list-style-type: none;
+}
+
+#mi-super-lista {
+    padding: 0;
+}
+
+#mi-super-lista>li {
     padding: 8px;
-    border: 1px solid blue;
-    margin: 16px;
+    border: 1px solid burlywood;
+    margin: 0 8px;
+    background-color: burlywood;
+    border-radius: 16px;
+    box-shadow: 5px 5px 16px gray;
 }
