@@ -3,32 +3,3 @@
 body {
     font-family: "Roboto", sans-serif;
 }
-
-.cartel {
-    height: 150px;
-    line-height: 150px;
-    background-color: cadetblue;
-    color: #eee;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 3px black;
-}
-
-.lista {
-    display: flex;
-    list-style-type: none;
-}
-
-#mi-super-lista {
-    padding: 0;
-}
-
-#mi-super-lista>li {
-    padding: 8px;
-    border: 1px solid burlywood;
-    margin: 0 8px;
-    background-color: burlywood;
-    border-radius: 16px;
-    box-shadow: 5px 5px 16px gray;
-}

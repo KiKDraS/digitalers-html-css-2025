@@ -7,133 +7,77 @@
     <title>Digitalers</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/breakpoint.css">
+    <link rel="stylesheet" href="css/custom-properties.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/flexbox.css">
-    <link rel="stylesheet" href="css/unidades-de-medida.css">
 </head>
 
 <body>
     <header>
-        <h1>Clase 09</h1>
+        <h1>Clase 10</h1>
     </header>
-    <main>
-        <h2>Box Modeling</h2>
-        <p>En CSS, el Box Modeling es una forma de pensar la estructura para realizar los diseños basada en cajas</p>
-        <p class="cartel">las propiedades de box modeling no se heredan</p>
-        <ul id="mi-super-lista" class="lista">
-            <li>Propiedades de la caja (cómo se forma la caja)
-                <ul>
-                    <li>width</li>
-                    <li>height</li>
-                    <li>border</li>
-                    <li>margin</li>
-                    <li>padding</li>
-                </ul>
-            </li>
-            <li>Forma en que se calcula el espacio ocupado por la caja
-                <ul>
-                    <li>content-box (por defecto): El espacio final ocupado por la caja es el resultado de la suma
-                        de su contenido, width, padding, margin y border</li>
-                    <li>border-box: El espacio final ocupado por la caja es igual al width</li>
-                </ul>
-            </li>
-            <li>Características de la caja (tipo de display)
-                <ul>
-                    <li>Elemento de línea (display: inline)</li>
-                    <li>Elemento de bloque (display: block)</li>
-                    <li>Elemento de línea-bloque (display: inline-block)</li>
-                    <ul>Display de "control de posición" - Se utilizan para modificar el layout de los elementos
-                        contenidos
-                        <li>Elementos flexibles (display: flex)</li>
-                        <li>Elementos de grilla (display: grid)</li>
-                    </ul>
-                </ul>
-            </li>
-        </ul>
+    <main class="container">
+        <section>
+            <h2 class="subrayado">Figma</h2>
+            <p>Herramienta para hacer diseños</p>
+        </section>
+        <section>
+            <h2>Diseño Responsivo</h2>
+            <p>Es un enfoque de diseño web que busca crear sitios web que se adapten a diferentes tamaños de pantalla y
+                dispositivos, como computadoras de escritorio, tabletas y teléfonos móviles.</p>
+            <h3>Mobile First</h3>
+            <p>Es una estrategia de diseño que prioriza la creación de experiencias óptimas para dispositivos móviles
+                antes
+                de adaptarse a pantallas más grandes. En lugar de diseñar primero para computadoras de escritorio y
+                luego
+                ajustar el diseño para dispositivos móviles, se comienza con un diseño simple y funcional para móviles,
+                y luego se expande a pantallas más grandes.</p>
+            <h3>Breakpoint</h3>
+            <p>Una medida que se utiliza para decirle al navegador que tiene que cambiar el layout (disposición) de los
+                elementos. Se utilizan para indicar cómo queremos que se vea nuestra web en un dispositivo mobile, una
+                tablet o un monitor de pc</p>
+            <h4>Breakpoints más comunes</h4>
+            <ul>
+                <li>hasta 768px - celulares y tablets pequeñas</li>
+                <li>hasta 900px - tablets</li>
+                <li>desde 1200px - monitores</li>
+            </ul>
+            <h3 class="subtitulo">Custom Properties (variables de CSS)</h3>
+            <p>Son una herramienta que permite crear cajas que guardan un valor que se va a reutilizar a largo de todo
+                el proyecto.
+                Son útiles para mantener la consistencia en el diseño y facilitar los cambios globales.</p>
+            </p>
+            <h3>Utility class</h3>
+            <p>Una clase de CSS pensada no para un elemento en particular sino para aplicar una serie de propiedades a
+                varios elementos</p>
 
-        <h3>Display Flex (flexbox)</h3>
-        <p>Flexbox es un modelo de diseño unidimensional que permite alinear y distribuir espacio entre elementos en una
-            interfaz de usuario.</p>
-
-        <div class="contenedor">
-            <div class="contenido">1</div>
-            <div class="contenido">2</div>
-            <div class="contenido">3</div>
-        </div>
-
-        <div class="contenedor-column">
-            <div class="contenido">1</div>
-            <div class="contenido">2</div>
-            <div class="contenido">3</div>
-        </div>
-
-        <div class="contenedor-column">
-            <div class="contenido">1</div>
-            <div class="contenedor-interno">
-                <div class="contenido">2</div>
-                <div class="contenido">3</div>
-                <div class="contenido">4</div>
+            <h3>Ejemplo Diseño Responsivo</h3>
+            <div class="skills-container">
+                <h3 class="titulo">Skills</h4>
+                    <div class="skills">
+                        <div>
+                            <div class="skill">
+                                <h4 class="titulo">HTML</h4>
+                                <progress value="95" max="100"></progress>
+                            </div>
+                            <div class="skill">
+                                <h4 class="titulo">CSS</h4>
+                                <progress value="75" max="100"></progress>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skill">
+                                <h4 class="titulo">JS</h4>
+                                <progress value="50" max="100"></progress>
+                            </div>
+                            <div class="skill">
+                                <h4 class="titulo">React</h4>
+                                <progress value="20" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="contenido">5</div>
-        </div>
-
-        <div class="contenedor">
-            <div class="contenido start">1</div>
-            <div class="contenido">2</div>
-            <div class="contenido end">3</div>
-        </div>
-
-        <h2>Unidades de Medida</h2>
-        <p>Son la herramienta que el navegador utiliza para calcular el tamaño que los distintos elementos deben tener
-        </p>
-
-        <ul>
-            <li>Absolutas - El tamaño es igual a la Medida
-                <ul>
-                    <li>px</li>
-                </ul>
-            </li>
-            <li>Relativas - El tamaño es el resultado del cálculo correspondiente a la medida utilizada
-                <ul>
-                    <li>% - tamaño = ancho/alto del contenedor padre * %. Tamaño se calcula en relación al contenedor
-                        padre</li>
-                    <li>vw/vh - tamaño = ancho(vw)/alto(vh) de la ventana del navegador. Tamaño se calcula en relación
-                        al navegador
-                        <ul>
-                            <li>svw - ancho del dispositivo más chico</li>
-                            <li>dvw - ancho del dispositivo</li>
-                        </ul>
-                    </li>
-                    <li>em - tamaño = alto de la tipografía del contenedor padre * em. Tamaño depende de la tipografía
-                        del contenedor padre</li>
-                    <li>rem - tamaño = alto de la tipografía del root (navegador). Tamaño depende de la tipografía del
-                        navegador </li>
-                </ul>
-            </li>
-        </ul>
-        <p>
-            Se recomienda % y viewport para contenedores y rem para tipografías.
-        </p>
-
-        <div class="porcentaje">Porcentaje</div>
-        <div class="vw">Viewport Width</div>
-        <div style="width: 500px;">
-            <div class="porcentaje">Porcentaje</div>
-            <div class="vw">Viewport Width</div>
-        </div>
-        <div id="contenedor" class="contenedor vw">
-            <div class="contenido">1</div>
-            <div class="contenido">2</div>
-            <div class="contenido">3</div>
-        </div>
-        <p class="rem">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod distinctio magni nisi iusto aliquid omnis
-            fugit ipsa, reprehenderit corrupti, aspernatur, alias accusantium blanditiis tempore ipsam. Expedita iure
-            ipsam quia quis.
-        </p>
-        <div class="image-container">
-            <img src="https://cdn.pixabay.com/photo/2022/10/07/11/02/autumn-7504820_960_720.jpg" alt="flores">
-        </div>
+        </section>
     </main>
     <footer>
         <span>&copy; Todos los derechos reservados</span>
