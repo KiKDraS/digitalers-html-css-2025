@@ -7,81 +7,115 @@
     <title>Digitalers</title>
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/breakpoint.css">
-    <link rel="stylesheet" href="css/custom-properties.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="container">
     <header>
-        <h1>Clase 10</h1>
+        <h1>Clase 11</h1>
     </header>
-    <main class="container">
+    <main>
         <section>
-            <h2 class="subrayado">Figma</h2>
-            <p>Herramienta para hacer diseños</p>
-        </section>
-        <section>
-            <h2>Diseño Responsivo</h2>
-            <p>Es un enfoque de diseño web que busca crear sitios web que se adapten a diferentes tamaños de pantalla y
-                dispositivos, como computadoras de escritorio, tabletas y teléfonos móviles.</p>
-            <h3>Mobile First</h3>
-            <p>Es una estrategia de diseño que prioriza la creación de experiencias óptimas para dispositivos móviles
-                antes
-                de adaptarse a pantallas más grandes. En lugar de diseñar primero para computadoras de escritorio y
-                luego
-                ajustar el diseño para dispositivos móviles, se comienza con un diseño simple y funcional para móviles,
-                y luego se expande a pantallas más grandes.</p>
-            <h3>Breakpoint</h3>
-            <p>Una medida que se utiliza para decirle al navegador que tiene que cambiar el layout (disposición) de los
-                elementos. Se utilizan para indicar cómo queremos que se vea nuestra web en un dispositivo mobile, una
-                tablet o un monitor de pc</p>
-            <h4>Breakpoints más comunes</h4>
-            <ul>
-                <li>hasta 768px - celulares y tablets pequeñas</li>
-                <li>hasta 900px - tablets</li>
-                <li>desde 1200px - monitores</li>
-            </ul>
-            <h3 class="subtitulo">Custom Properties (variables de CSS)</h3>
-            <p>Son una herramienta que permite crear cajas que guardan un valor que se va a reutilizar a largo de todo
-                el proyecto.
-                Son útiles para mantener la consistencia en el diseño y facilitar los cambios globales.</p>
+            <h2>Box Modeling</h2>
+            <p>En CSS, el Box Modeling es una forma de pensar la estructura para realizar los diseños basada en cajas
             </p>
-            <h3>Utility class</h3>
-            <p>Una clase de CSS pensada no para un elemento en particular sino para aplicar una serie de propiedades a
-                varios elementos</p>
+            <ul>
+                <li>Propiedades de la caja (cómo se forma la caja)
+                    <ul>
+                        <li>width</li>
+                        <li>height</li>
+                        <li>border</li>
+                        <li>margin</li>
+                        <li>padding</li>
+                    </ul>
+                </li>
+                <li>Forma en que se calcula el espacio ocupado por la caja
+                    <ul>
+                        <li>content-box (por defecto): El espacio final ocupado por la caja es el resultado de la suma
+                            de su contenido, width, padding, margin y border</li>
+                        <li>border-box: El espacio final ocupado por la caja es igual al width</li>
+                    </ul>
+                </li>
+                <li>Características de la caja (tipo de display)
+                    <ul>
+                        <li>Elemento de línea (display: inline)</li>
+                        <li>Elemento de bloque (display: block)</li>
+                        <li>Elemento de línea-bloque (display: inline-block)</li>
+                        <ul>Display de "control de posición" - Se utilizan para modificar el layout de los elementos
+                            contenidos
+                            <li>Elementos flexibles (display: flex)</li>
+                            <li>Elementos de grilla (display: grid)</li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Display Grid (Grillas)</h3>
+            <p>Permite crear una estructura bidimensional de filas y columnas para el diseño de elementos web. Al
+                aplicar esta propiedad a un elemento padre, sus hijos se organizan siguiendo la cuadrícula definida.
+                Esto permite un control preciso sobre la posición y el tamaño de los elementos dentro del diseño. </p>
 
-            <h3>Ejemplo Diseño Responsivo</h3>
-            <div class="skills-container">
-                <h3 class="titulo">Skills</h4>
-                    <div class="skills">
-                        <div>
-                            <div class="skill">
-                                <h4 class="titulo">HTML</h4>
-                                <progress value="95" max="100"></progress>
-                            </div>
-                            <div class="skill">
-                                <h4 class="titulo">CSS</h4>
-                                <progress value="75" max="100"></progress>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="skill">
-                                <h4 class="titulo">JS</h4>
-                                <progress value="50" max="100"></progress>
-                            </div>
-                            <div class="skill">
-                                <h4 class="titulo">React</h4>
-                                <progress value="20" max="100"></progress>
-                            </div>
-                        </div>
-                    </div>
+            <h3>Ejemplo</h3>
+            <h4>Declarar filas y columnas - La grilla NO ocupa todo el contenedor</h4>
+            <div class="grid row-col">
+                <div class="contenido">1</div>
+                <div class="contenido">2</div>
+                <div class="contenido">3</div>
+                <div class="contenido">4</div>
+                <div class="contenido">5</div>
+            </div>
+            <h4>Declarar filas y columnas - La grilla ocupa todo el contenedor</h4>
+            <div class="grid row-col-full">
+                <div class="contenido">1</div>
+                <div class="contenido">2</div>
+                <div class="contenido">3</div>
+                <div class="contenido">4</div>
+                <div class="contenido">5</div>
+                <div class="contenido">6</div>
+                <div class="contenido">7</div>
+                <div class="contenido">8</div>
+                <div class="contenido">9</div>
+                <div class="contenido">10</div>
+            </div>
+            </div>
+            <h4>Grid Area</h4>
+            <p>Permite combinar los espacios que se forman con la division de filas y columnas para que un elemento
+                tenga mas espacio para posicionar</p>
+            <div class="grid grid-area">
+                <div class="contenido elemento-en-3">1</div>
+                <div class="contenido elemento-en-4">2</div>
+                <div class="contenido elemento-en-2">3</div>
+                <div class="contenido elemento-en-5">4</div>
+                <div class="contenido elemento-en-1">5</div>
             </div>
         </section>
+        <section>
+            <h2>Overflow</h2>
+            <p>Qué queremos que pase cuando el tamaño del contenido es mayor que el tamaño del contenedor</p>
+            <p>Por defecto, el navegador muestra todo el contenido sin importar que este sea más grande que su
+                contenedor</p>
+            <div class="container-exact">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
+                    quisquam dolores illo beatae ratione sunt ab accusantium.</p>
+            </div>
+            <div class="container-exact recortar">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
+                    quisquam dolores illo beatae ratione sunt ab accusantium</p>
+            </div>
+            <div class="container-exact scroll">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
+                    quisquam dolores illo beatae ratione sunt ab accusantiumat.</p>
+            </div>
+
+        </section>
     </main>
-    <footer>
-        <span>&copy; Todos los derechos reservados</span>
-    </footer>
+    <section class="breadcrumb">
+        <h3>breadcrumb</h3>
+    </section>
+    <aside>
+        <nav>
+            <a href="https://cssgridgarden.com/#es">CSS Garden</a>
+        </nav>
+    </aside>
 </body>
 
 </html>

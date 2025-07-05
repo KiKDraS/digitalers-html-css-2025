@@ -3,3 +3,183 @@
 body {
     font-family: "Roboto", sans-serif;
 }
+
+/*
+    Display Grid
+*/
+.grid {
+    width: clamp(250px, 50vw, 750px);
+    min-height: 350px;
+    height: 50vh;
+    max-height: 950px;
+    border: 1px solid black;
+    margin: auto;
+
+    display: grid;
+}
+
+.contenido {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: aliceblue;
+}
+
+.row-col {
+    grid-template-columns: 150px 20% 10vw;
+    /*Declarar la cantidad de columnas que quiero que tenga la grilla*/
+    grid-template-rows: 150px 20% 10vh;
+    /*Declarar la cantidad de filas que quiero que tenga la grilla*/
+
+    /*Posicionar la grilla (sólo válido si la grilla NO ocupa todo el contenedor)*/
+    justify-content: center;
+    /*justify -> horizontal*/
+    align-content: center;
+    /*align -> vertical*/
+
+    /*Posicionar los elementos internos (hijos directos)*/
+    justify-items: center;
+    /*justify -> horizontal*/
+    align-items: center;
+    /*align -> vertical*/
+}
+
+.row-col-full {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-area {
+    grid-template-areas: "area-1 area-1 area-1"
+        "area-2 area-3 area-4"
+        "area-5 area-5 area-5";
+
+    /*
+        "" -> fila
+        nombre -> columna ocupada
+    */
+
+    justify-items: center;
+    align-items: center;
+}
+
+.elemento-en-1 {
+    grid-area: area-1;
+}
+
+.elemento-en-2 {
+    grid-area: area-2;
+}
+
+.elemento-en-3 {
+    grid-area: area-3;
+}
+
+.elemento-en-4 {
+    grid-area: area-4;
+}
+
+.elemento-en-5 {
+    grid-area: area-5;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "header header header header header header header header header header header header"
+        "nav nav breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb  breadcrumb breadcrumb"
+        "nav nav main main main main main main main main main main";
+}
+
+header {
+    grid-area: header;
+    background-color: rgba(255, 201, 201, 0.3);
+}
+
+main {
+    grid-area: main;
+    /* background-color: hsla(49, 100%, 80%, 0.3); */
+    background-image: url("https://cdn.pixabay.com/photo/2025/04/07/13/59/friends-9519331_960_720.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: color;
+    background-attachment: local;
+    color: antiquewhite;
+}
+
+aside {
+    grid-area: nav;
+    background-color: hsla(128, 71%, 82%, 0.3);
+}
+
+.breadcrumb {
+    grid-area: breadcrumb;
+    background-color: hsla(206, 100%, 82%, 0.3);
+}
+
+/*
+    Overflow
+*/
+
+.container-exact {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 36px auto;
+}
+
+.recortar {
+    overflow-y: hidden;
+}
+
+.scroll {
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox: oculta la barra */
+    -ms-overflow-style: none;
+    /* IE y Edge: oculta la barra */
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari: oculta la barra */
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+main {
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox: oculta la barra */
+    -ms-overflow-style: none;
+    /* IE y Edge: oculta la barra */
+}
+
+main::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari: oculta la barra */
+}
+
+/*
+    Estilos de lista
+*/
+
+ul {
+    list-style-type: none;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/23/00/css3-1841590_640.png");
+    background-size: contain;
+}
