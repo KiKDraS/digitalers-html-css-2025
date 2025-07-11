@@ -88,9 +88,17 @@ body {
 
 .container {
     display: grid;
-    grid-template-areas: "header header header header header header header header header header header header"
-        "nav nav breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb  breadcrumb breadcrumb"
-        "nav nav main main main main main main main main main main";
+    grid-template-columns: "header"
+        "breadcrumb"
+        "main";
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-areas: "header header header header header header header header header header header header"
+            "nav nav breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb  breadcrumb breadcrumb"
+            "nav nav main main main main main main main main main main";
+    }
 }
 
 header {
@@ -112,8 +120,15 @@ main {
 }
 
 aside {
+    display: none;
     grid-area: nav;
     background-color: hsla(128, 71%, 82%, 0.3);
+}
+
+@media (min-width: 900px) {
+    aside {
+        display: block;
+    }
 }
 
 .breadcrumb {
