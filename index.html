@@ -12,110 +12,56 @@
 
 <body class="container">
     <header>
-        <h1>Clase 11</h1>
+        <h1>Clase 12</h1>
     </header>
     <main>
         <section>
-            <h2>Box Modeling</h2>
-            <p>En CSS, el Box Modeling es una forma de pensar la estructura para realizar los diseños basada en cajas
-            </p>
+            <h2>Position</h2>
+            <p>La propiedad position controla <strong>cómo se coloca</strong> un elemento en la página. Tiene 5 valores
+                principales:</p>
+
             <ul>
-                <li>Propiedades de la caja (cómo se forma la caja)
+                <li><strong>static</strong> - (valor por defecto): El elemento sigue el flujo normal de la página.</li>
+                <li><strong>relative</strong> - Se mueve respecto a su posición original (con top, left, etc.).</li>
+                <li><strong>absolute</strong> - Se posiciona respecto a su ancestro más cercano con position (no
+                    static).</li>
+                <li><strong>fixed</strong> - Se queda fijo en la pantalla (útil para menús que no se mueven al hacer
+                    scroll).</li>
+                <li><strong>sticky</strong> - Híbrido entre relative y fixed ("se pega" al hacer scroll).</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Pseudo-clases (:)</h2>
+            <p>Estilos aplicados en <em>un estado específico</em> de un elemento</p>
+            <p>Las pseudo-clases (:) pueden dividirse en dos grandes grupos según lo que representan:</p>
+            <ul>
+                <li>Estados interactivos (acciones del usuario) - Dependen de la interacción con el elemento.
                     <ul>
-                        <li>width</li>
-                        <li>height</li>
-                        <li>border</li>
-                        <li>margin</li>
-                        <li>padding</li>
+                        <li><strong>:hover</strong> - Cuando el mouse pasa por encima.</li>
+                        <li><strong>:active</strong> - Al hacer clic (mientras se mantiene presionado).</li>
+                        <li><strong>:focus</strong> - Cuando el elemento está seleccionado (ej: un input).</li>
                     </ul>
                 </li>
-                <li>Forma en que se calcula el espacio ocupado por la caja
+                <li>Estados estructurales (posición en el HTML) - Dependen de la ubicación del elemento en el documento.
                     <ul>
-                        <li>content-box (por defecto): El espacio final ocupado por la caja es el resultado de la suma
-                            de su contenido, width, padding, margin y border</li>
-                        <li>border-box: El espacio final ocupado por la caja es igual al width</li>
-                    </ul>
-                </li>
-                <li>Características de la caja (tipo de display)
-                    <ul>
-                        <li>Elemento de línea (display: inline)</li>
-                        <li>Elemento de bloque (display: block)</li>
-                        <li>Elemento de línea-bloque (display: inline-block)</li>
-                        <ul>Display de "control de posición" - Se utilizan para modificar el layout de los elementos
-                            contenidos
-                            <li>Elementos flexibles (display: flex)</li>
-                            <li>Elementos de grilla (display: grid)</li>
-                        </ul>
+                        <li><strong>:first-child</strong> - El primer hijo de su contenedor</li>
+                        <li><strong>:nth-child(2)</strong> - El segundo hijo.</li>
+                        <li><strong>:last-child</strong> - El último hijo.</li>
                     </ul>
                 </li>
             </ul>
-            <h3>Display Grid (Grillas)</h3>
-            <p>Permite crear una estructura bidimensional de filas y columnas para el diseño de elementos web. Al
-                aplicar esta propiedad a un elemento padre, sus hijos se organizan siguiendo la cuadrícula definida.
-                Esto permite un control preciso sobre la posición y el tamaño de los elementos dentro del diseño. </p>
-
-            <h3>Ejemplo</h3>
-            <h4>Declarar filas y columnas - La grilla NO ocupa todo el contenedor</h4>
-            <div class="grid row-col">
-                <div class="contenido">1</div>
-                <div class="contenido">2</div>
-                <div class="contenido">3</div>
-                <div class="contenido">4</div>
-                <div class="contenido">5</div>
-            </div>
-            <h4>Declarar filas y columnas - La grilla ocupa todo el contenedor</h4>
-            <div class="grid row-col-full">
-                <div class="contenido">1</div>
-                <div class="contenido">2</div>
-                <div class="contenido">3</div>
-                <div class="contenido">4</div>
-                <div class="contenido">5</div>
-                <div class="contenido">6</div>
-                <div class="contenido">7</div>
-                <div class="contenido">8</div>
-                <div class="contenido">9</div>
-                <div class="contenido">10</div>
-            </div>
-            </div>
-            <h4>Grid Area</h4>
-            <p>Permite combinar los espacios que se forman con la division de filas y columnas para que un elemento
-                tenga mas espacio para posicionar</p>
-            <div class="grid grid-area">
-                <div class="contenido elemento-en-3">1</div>
-                <div class="contenido elemento-en-4">2</div>
-                <div class="contenido elemento-en-2">3</div>
-                <div class="contenido elemento-en-5">4</div>
-                <div class="contenido elemento-en-1">5</div>
-            </div>
         </section>
         <section>
-            <h2>Overflow</h2>
-            <p>Qué queremos que pase cuando el tamaño del contenido es mayor que el tamaño del contenedor</p>
-            <p>Por defecto, el navegador muestra todo el contenido sin importar que este sea más grande que su
-                contenedor</p>
-            <div class="container-exact">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
-                    quisquam dolores illo beatae ratione sunt ab accusantium.</p>
-            </div>
-            <div class="container-exact recortar">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
-                    quisquam dolores illo beatae ratione sunt ab accusantium</p>
-            </div>
-            <div class="container-exact scroll">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure, cum eos aliquid doloribus
-                    quisquam dolores illo beatae ratione sunt ab accusantiumat.</p>
-            </div>
-
+            <h2>Pseudo-elementos (::)</h2>
+            <p>Estilos aplicados a <em>partes específicas</em> de un elemento.</p>
+            <ul>
+                <li><strong>::first-letter</strong> - Primera letra de un párrafo.</li>
+                <li><strong>::first-line</strong> - Primera línea de un párrafo.</li>
+                <li><strong>::selection</strong> - Texto seleccionado.</li>
+                <li><strong>::before/::after</strong> - Añaden contenido antes/después del elemento.</li>
+            </ul>
         </section>
     </main>
-    <section class="breadcrumb">
-        <h3>breadcrumb</h3>
-    </section>
-    <aside>
-        <nav>
-            <a href="https://cssgridgarden.com/#es">CSS Garden</a>
-        </nav>
-    </aside>
 </body>
 
 </html>
