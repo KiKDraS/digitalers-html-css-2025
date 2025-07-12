@@ -7,12 +7,18 @@
     <title>Digitalers</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/position.css">
+    <link rel="stylesheet" href="css/pseudo-clase.css">
+    <link rel="stylesheet" href="assets/icons.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="container">
     <header>
         <h1>Clase 12</h1>
+        <nav>
+            <a href="">link 1</a><a href="">link 2</a><a href="">link 3</a>
+        </nav>
     </header>
     <main>
         <section>
@@ -24,11 +30,20 @@
                 <li><strong>static</strong> - (valor por defecto): El elemento sigue el flujo normal de la página.</li>
                 <li><strong>relative</strong> - Se mueve respecto a su posición original (con top, left, etc.).</li>
                 <li><strong>absolute</strong> - Se posiciona respecto a su ancestro más cercano con position (no
-                    static).</li>
+                    static). Si no encuentra ninguno, se ubica en relación al body</li>
                 <li><strong>fixed</strong> - Se queda fijo en la pantalla (útil para menús que no se mueven al hacer
                     scroll).</li>
                 <li><strong>sticky</strong> - Híbrido entre relative y fixed ("se pega" al hacer scroll).</li>
             </ul>
+
+            <div class="box relative">Relative</div>
+            <div class="box relative-2">
+                <div class="box absolute">Absolute</div>
+                <div class="box absolute absolute-2">Absolute 2</div>
+                <div class="box absolute-3">Absolute 3</div>
+            </div>
+            <!-- <div class="box absolute">Absolute</div> -->
+            <div class="box fixed">Fixed</div>
         </section>
         <section>
             <h2>Pseudo-clases (:)</h2>
@@ -50,6 +65,21 @@
                     </ul>
                 </li>
             </ul>
+            <button class="btn">Click me!</button>
+            <form action="">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <button class="btn">Enviar</button>
+            </form>
+            <ol>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ol>
         </section>
         <section>
             <h2>Pseudo-elementos (::)</h2>
@@ -62,6 +92,10 @@
             </ul>
         </section>
     </main>
+    <div class="icon-container">
+        <div class="icon icon-whatsapp"></div>
+        <textarea name="chat" id="chat" rows="10" cols="30"></textarea>
+    </div>
 </body>
 
 </html>

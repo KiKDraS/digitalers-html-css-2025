@@ -1,0 +1,86 @@
+.box {
+    width: 150px;
+    height: 150px;
+}
+
+.relative {
+    background-color: blue;
+    color: azure;
+
+    /*top: ; Quiero mover el elemento desde arriba*/
+    /*left: ; Quiero mover el elemento desde la izquierda*/
+    /*right: ; Quiero mover el elemento desde la derecha*/
+    /*bottom: ; Quiero mover el elemento desde abajo*/
+
+    position: relative;
+    top: 8px;
+}
+
+.relative-2 {
+    position: relative;
+    width: 95vw;
+    max-width: 550px;
+    height: 35vh;
+    max-height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.absolute {
+    background-color: chocolate;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.absolute-2 {
+    background-color: rgb(108, 210, 30);
+    bottom: 16px;
+    right: 16px;
+
+    z-index: 3;
+    /*Permite indicar qué elemento se posiciona arriba. Mayor valor de z-index, más arriba el elemento*/
+}
+
+.absolute-3 {
+    background-color: rgb(210, 30, 183);
+    width: 250px;
+    height: 250px;
+
+    position: absolute;
+    bottom: -32px;
+    right: -48px;
+    z-index: 1;
+    /*Permite indicar qué elemento se posiciona arriba. Mayor valor de z-index, más arriba el elemento*/
+
+    border-radius: 100%;
+}
+
+
+
+.fixed {
+    background-color: cornflowerblue;
+    color: antiquewhite;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+nav {
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    color: wheat;
+    padding: 4px;
+}

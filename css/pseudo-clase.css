@@ -1,0 +1,94 @@
+/*
+    pseudo-clases - Estados interactivos
+*/
+
+.btn {
+    padding: 8px 4px;
+    background-color: rgb(111, 111, 245);
+    color: aliceblue;
+    font-weight: 500;
+    border: 1px solid rgb(111, 111, 245);
+    border-radius: 48px;
+    min-width: 150px;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    color: rgb(111, 111, 245);
+    border: 1px solid aliceblue;
+    cursor: pointer;
+}
+
+form {
+    margin: 16px 0;
+    padding: 16px;
+    background-color: white;
+    color: black;
+    width: 250px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
+}
+
+form:hover {
+    box-shadow: none;
+}
+
+input {
+    border: 1px solid red;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+a:active {
+    color: blue;
+}
+
+/*:has - Recordar pedir ejemplo*/
+
+/*
+    pseudo-clases - Estados estructurales
+*/
+main {
+    height: 80vh;
+    overflow: auto;
+}
+
+main section:nth-child(odd) {
+    background-color: darkblue;
+    color: whitesmoke;
+}
+
+main section:nth-child(even) {
+    background-color: rgb(93, 82, 101);
+    color: whitesmoke;
+}
+
+main section {
+    min-height: 100vh;
+    padding: 16px;
+
+    position: sticky;
+    top: 0;
+}
+
+ol li:first-child {
+    color: red;
+}
+
+ol li:nth-child(2),
+ol li:nth-child(3) {
+    color: green;
+}
+
+ol li:last-child {
+    color: blue;
+}
