@@ -6,96 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalers</title>
 
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/transform.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/position.css">
-    <link rel="stylesheet" href="css/pseudo-clase.css">
-    <link rel="stylesheet" href="assets/icons.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="container">
+<body>
     <header>
-        <h1>Clase 12</h1>
-        <nav>
-            <a href="">link 1</a><a href="">link 2</a><a href="">link 3</a>
-        </nav>
+        <h1>Clase 13</h1>
     </header>
     <main>
         <section>
-            <h2>Position</h2>
-            <p>La propiedad position controla <strong>cómo se coloca</strong> un elemento en la página. Tiene 5 valores
-                principales:</p>
-
+            <h2>Transiciones</h2>
+            <p>
+                Las transiciones se basan en un principio muy básico: conseguir un
+                efecto suavizado entre un estado inicial y un estado final al realizar
+                una acción. Por ejemplo, utilizando la pseudo-clase :hover podemos
+                cambiar las propiedades CSS aplicadas a un elemento HTML cuando el
+                usuario pasa el mouse por encima del elemento. Si, además, aplicamos
+                transiciones ese cambio se visualizará de forma más pausada y orgánica
+                generando una sensación de movimiento
+                <br />
+                No todas las propiedades de CSS son transicionables. Por regla
+                general, las propiedades cuantificables son transicionables.
+            </p>
+            <h3>Propiedades de transición</h3>
             <ul>
-                <li><strong>static</strong> - (valor por defecto): El elemento sigue el flujo normal de la página.</li>
-                <li><strong>relative</strong> - Se mueve respecto a su posición original (con top, left, etc.).</li>
-                <li><strong>absolute</strong> - Se posiciona respecto a su ancestro más cercano con position (no
-                    static). Si no encuentra ninguno, se ubica en relación al body</li>
-                <li><strong>fixed</strong> - Se queda fijo en la pantalla (útil para menús que no se mueven al hacer
-                    scroll).</li>
-                <li><strong>sticky</strong> - Híbrido entre relative y fixed ("se pega" al hacer scroll).</li>
+                <li>transition-property - ¿Qué propiedades van a transicionar?</li>
+                <li>transition-duration - ¿Cuánto tiempo dura la transición?</li>
+                <li>
+                    transition-timing-function - ¿Cómo se distribuyen los milisegundos
+                    de duración?
+                </li>
+                <li>transition-delay - ¿Cuánto tarda la transición en arrancar?</li>
+                <li>
+                    short hand - transition: property duration timing-function delay
+                </li>
             </ul>
+            <h3>Tipos de transiciones</h3>
+            <h4>Transición de entrada</h4>
+            <p>Transición que se encarga de aplicar un estilo al momento de lanzar la transición.</p>
+            <a href="#" class="entrada">Transición de entrada</a>
+            <h4>Transición de entrada-salida</h4>
+            <p>Transición que se encarga de aplicar un estilo al momento de lanzar la transición y al momento de que ya
+                no se cumpla la condición para aplicar la transición de entrada.</p>
+            <a href="#" class="entrada-salida">Transición de entrada-salida</a>
+            <a href="#" class="entrada">Transición de entrada</a>
+            <h4>Transición Múltiple</h4>
+            <p>Aplicar transición a varias propiedades de CSS en entrada y salida en una sola línea</p>
+            <a href="#" class="multiple">Transición múltiple</a>
+            <h3>Ejemplo Dropdown</h3>
+            <select name="" id="">
+                <option value="">Elemento A</option>
+                <option value="">Elemento B</option>
+                <option value="">Elemento C</option>
+            </select>
 
-            <div class="box relative">Relative</div>
-            <div class="box relative-2">
-                <div class="box absolute">Absolute</div>
-                <div class="box absolute absolute-2">Absolute 2</div>
-                <div class="box absolute-3">Absolute 3</div>
+            <div class="dropdown-container">
+                <button>Seleccione opción</button>
+                <ul>
+                    <li>Elemento A</li>
+                    <li>Elemento B</li>
+                    <li>Elemento C</li>
+                </ul>
             </div>
-            <!-- <div class="box absolute">Absolute</div> -->
-            <div class="box fixed">Fixed</div>
         </section>
         <section>
-            <h2>Pseudo-clases (:)</h2>
-            <p>Estilos aplicados en <em>un estado específico</em> de un elemento</p>
-            <p>Las pseudo-clases (:) pueden dividirse en dos grandes grupos según lo que representan:</p>
+            <h2>Transformaciones</h2>
+            <p>
+                Las transformaciones son funciones de CSS que permiten cambiar la
+                posición, la dirección o el tamaño de un elemento un elemento del HTML
+            </p>
+            <h3>Funciones disponibles</h3>
             <ul>
-                <li>Estados interactivos (acciones del usuario) - Dependen de la interacción con el elemento.
-                    <ul>
-                        <li><strong>:hover</strong> - Cuando el mouse pasa por encima.</li>
-                        <li><strong>:active</strong> - Al hacer clic (mientras se mantiene presionado).</li>
-                        <li><strong>:focus</strong> - Cuando el elemento está seleccionado (ej: un input).</li>
-                    </ul>
+                <li>
+                    translate - permite mover el elemento en el eje de coordenadas
+                    translate(x, y)
                 </li>
-                <li>Estados estructurales (posición en el HTML) - Dependen de la ubicación del elemento en el documento.
-                    <ul>
-                        <li><strong>:first-child</strong> - El primer hijo de su contenedor</li>
-                        <li><strong>:nth-child(2)</strong> - El segundo hijo.</li>
-                        <li><strong>:last-child</strong> - El último hijo.</li>
-                    </ul>
-                </li>
+                <li>rotate - permite rotar el elemento en su eje rotate(x, y)</li>
+                <li>scale - permite agrandar/achicar un elemento</li>
             </ul>
-            <button class="btn">Click me!</button>
-            <form action="">
-                <div>
-                    <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name">
-                </div>
-
-                <button class="btn">Enviar</button>
-            </form>
-            <ol>
-                <li>Elemento 1</li>
-                <li>Elemento 2</li>
-                <li>Elemento 3</li>
-                <li>Elemento 4</li>
-            </ol>
+            <h3>Ejemplos</h3>
+            <div class="rotate">ROTATE</div>
+            <div class="scale">SCALE</div>
+            <div class="wrapper">
+                <div class="translate">TRANSLATE</div>
+            </div>
         </section>
         <section>
-            <h2>Pseudo-elementos (::)</h2>
-            <p>Estilos aplicados a <em>partes específicas</em> de un elemento.</p>
+            <h2>Animaciones</h2>
+            <p>
+                Las transiciones permiten cambiar un elemento entre dos estados. Por
+                su parte, las animaciones permiten el cambio entre múltiples estados
+                e, incluso, es posible plantear una repetición infinita de estos
+                cambios.
+                <br />
+                Una animación, entonces, es la suma de varias transiciones. Estás
+                transiciones son conocidas como fotogramas y se arman utilizando la
+                propiedad @keyframe
+            </p>
+            <h2>Propiedades de animación</h2>
             <ul>
-                <li><strong>::first-letter</strong> - Primera letra de un párrafo.</li>
-                <li><strong>::first-line</strong> - Primera línea de un párrafo.</li>
-                <li><strong>::selection</strong> - Texto seleccionado.</li>
-                <li><strong>::before/::after</strong> - Añaden contenido antes/después del elemento.</li>
+                <li>animation-name - Nombre de la animación a aplicar.</li>
+                <li>animation-duration - Duración de la animación.</li>
+                <li>animation-timing-function - Ritmo de la animación.</li>
+                <li>animation-delay - Retardo en iniciar la animación.</li>
+                <li>
+                    animation-iteration-count - Número de veces que se repetirá.
+                    (infinite === nunca termina)
+                </li>
+                <li>
+                    animation-play-state - Estado de la animación. (usando JS permite
+                    iniciar/pausar la animación)
+                </li>
+                <li>
+                    animation: name duration timing-function delay iteration-count:
+                </li>
             </ul>
         </section>
+        <h3>Ejemplos</h3>
+        <div class="simple"></div>
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </main>
-    <div class="icon-container">
-        <div class="icon icon-whatsapp"></div>
-        <textarea name="chat" id="chat" rows="10" cols="30"></textarea>
-    </div>
+
+    <script>
+        const button = document.querySelector(".dropdown-container button");
+        const ul = document.querySelector(".dropdown-container ul");
+
+        let ulOculto = true;
+
+        button.addEventListener("click", () => {
+            ul.style.display = ulOculto ? "block" : "none";
+            setTimeout(() => {
+                ul.classList.toggle("fade-in");
+            }, 0.2);
+            ulOculto = !ulOculto;
+        })
+    </script>
 </body>
 
 </html>
