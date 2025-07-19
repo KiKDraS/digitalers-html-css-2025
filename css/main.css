@@ -1,1 +1,36 @@
+@import url("./variables.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
+section {
+    color: var(--primary-color);
+    /*propiedad: valor;*/
+    background-color: var(--secondary-color);
+}
+
+/* body header {
+
+} */
+
+body {
+    header {
+        background-color: black;
+    }
+}
+
+.btn {
+    span {
+        font-weight: bold;
+    }
+}
+
+.btn-dos {
+    span {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,16 @@
+@use "../utils/font" as u;
+@use "../utils/functions" as f;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: u.$primary-font;
+
+  //   width: 50%;
+}

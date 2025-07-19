@@ -1,0 +1,19 @@
+@use "sass:math"; /*@use = @import de CSS pero para funcionalidades*/
+
+/*
+   Función - un conjunto de instrucciones para hacer una determinada tarea 
+
+   Tarea: Calcular el valor de rem
+    -> ¿Qué necesito? - La cantidad de pixeles que quiero representar
+    -> ¿Qué tengo que hacer? - Dividir la cantidad de px a representar por 16 
+*/
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error "Don't use units when using the rem() function; only numbers";
+  }
+}
+
+//rem(24) -> 24 / 16 -> 1.5rem

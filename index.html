@@ -6,150 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalers</title>
 
-    <link rel="stylesheet" href="css/transitions.css">
-    <link rel="stylesheet" href="css/transform.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Clase 13</h1>
+        <h1>Clase 14</h1>
     </header>
-    <main>
-        <section>
-            <h2>Transiciones</h2>
-            <p>
-                Las transiciones se basan en un principio muy básico: conseguir un
-                efecto suavizado entre un estado inicial y un estado final al realizar
-                una acción. Por ejemplo, utilizando la pseudo-clase :hover podemos
-                cambiar las propiedades CSS aplicadas a un elemento HTML cuando el
-                usuario pasa el mouse por encima del elemento. Si, además, aplicamos
-                transiciones ese cambio se visualizará de forma más pausada y orgánica
-                generando una sensación de movimiento
-                <br />
-                No todas las propiedades de CSS son transicionables. Por regla
-                general, las propiedades cuantificables son transicionables.
-            </p>
-            <h3>Propiedades de transición</h3>
+    <main class="grid">
+        <section class="grid__main">
+            <h2>Sass</h2>
+            <p>Sass es un <strong>pre-procesador de CSS</strong> que añade <i>"super poderes"</i> a tus estilos</p>
+            <h3>Conceptos Básicos</h3>
             <ul>
-                <li>transition-property - ¿Qué propiedades van a transicionar?</li>
-                <li>transition-duration - ¿Cuánto tiempo dura la transición?</li>
-                <li>
-                    transition-timing-function - ¿Cómo se distribuyen los milisegundos
-                    de duración?
-                </li>
-                <li>transition-delay - ¿Cuánto tarda la transición en arrancar?</li>
-                <li>
-                    short hand - transition: property duration timing-function delay
-                </li>
-            </ul>
-            <h3>Tipos de transiciones</h3>
-            <h4>Transición de entrada</h4>
-            <p>Transición que se encarga de aplicar un estilo al momento de lanzar la transición.</p>
-            <a href="#" class="entrada">Transición de entrada</a>
-            <h4>Transición de entrada-salida</h4>
-            <p>Transición que se encarga de aplicar un estilo al momento de lanzar la transición y al momento de que ya
-                no se cumpla la condición para aplicar la transición de entrada.</p>
-            <a href="#" class="entrada-salida">Transición de entrada-salida</a>
-            <a href="#" class="entrada">Transición de entrada</a>
-            <h4>Transición Múltiple</h4>
-            <p>Aplicar transición a varias propiedades de CSS en entrada y salida en una sola línea</p>
-            <a href="#" class="multiple">Transición múltiple</a>
-            <h3>Ejemplo Dropdown</h3>
-            <select name="" id="">
-                <option value="">Elemento A</option>
-                <option value="">Elemento B</option>
-                <option value="">Elemento C</option>
-            </select>
-
-            <div class="dropdown-container">
-                <button>Seleccione opción</button>
-                <ul>
-                    <li>Elemento A</li>
-                    <li>Elemento B</li>
-                    <li>Elemento C</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>Transformaciones</h2>
-            <p>
-                Las transformaciones son funciones de CSS que permiten cambiar la
-                posición, la dirección o el tamaño de un elemento un elemento del HTML
-            </p>
-            <h3>Funciones disponibles</h3>
-            <ul>
-                <li>
-                    translate - permite mover el elemento en el eje de coordenadas
-                    translate(x, y)
-                </li>
-                <li>rotate - permite rotar el elemento en su eje rotate(x, y)</li>
-                <li>scale - permite agrandar/achicar un elemento</li>
-            </ul>
-            <h3>Ejemplos</h3>
-            <div class="rotate">ROTATE</div>
-            <div class="scale">SCALE</div>
-            <div class="wrapper">
-                <div class="translate">TRANSLATE</div>
-            </div>
-        </section>
-        <section>
-            <h2>Animaciones</h2>
-            <p>
-                Las transiciones permiten cambiar un elemento entre dos estados. Por
-                su parte, las animaciones permiten el cambio entre múltiples estados
-                e, incluso, es posible plantear una repetición infinita de estos
-                cambios.
-                <br />
-                Una animación, entonces, es la suma de varias transiciones. Estás
-                transiciones son conocidas como fotogramas y se arman utilizando la
-                propiedad @keyframe
-            </p>
-            <h2>Propiedades de animación</h2>
-            <ul>
-                <li>animation-name - Nombre de la animación a aplicar.</li>
-                <li>animation-duration - Duración de la animación.</li>
-                <li>animation-timing-function - Ritmo de la animación.</li>
-                <li>animation-delay - Retardo en iniciar la animación.</li>
-                <li>
-                    animation-iteration-count - Número de veces que se repetirá.
-                    (infinite === nunca termina)
-                </li>
-                <li>
-                    animation-play-state - Estado de la animación. (usando JS permite
-                    iniciar/pausar la animación)
-                </li>
-                <li>
-                    animation: name duration timing-function delay iteration-count:
-                </li>
+                <li>Variables: Guardan valores reutilizables (colores, tamaños, etc.).</li>
+                <li>Anidamiento (Nesting): Escribe reglas CSS dentro de otras, reflejando la estructura HTML.</li>
+                <li>Mixins: Funciones que reutilizan bloques de estilos.</li>
+                <li>Herencia (@extend): Comparte estilos entre selectores.</li>
+                <li>Módulos (@use): Divide tu código en archivos parciales (importados con @use).</li>
+                <li>Parciales: Archivos Sass que comienzan con _ (ej: _variables.scss) y no se compilan a CSS.</li>
             </ul>
         </section>
-        <h3>Ejemplos</h3>
-        <div class="simple"></div>
-        <div class="loader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <section class="grid__sidebar">
+            <h2>CSS</h2>
+            <ul>
+                <li>Custom properties (variables): Son variables que almacenan valores reutilizables en CSS (como
+                    colores, tamaños o márgenes). Se
+                    definen con --nombre-variable y se usan con var()</li>
+                <li>CSS Nesting: Técnica para escribir reglas CSS dentro de otras, reflejando la estructura HTML</li>
+                <li>Funciones: Operaciones predefinidas que procesan valores directamente en CSS. Las más comunes
+                    <ul>
+                        <li>Matemáticas
+                            <ul>
+                                <li>calc</li>
+                                <li>clamp</li>
+                            </ul>
+                        </li>
+                        <li>Colores
+                            <ul>
+                                <li>hsl</li>
+                                <li>rgba</li>
+                            </ul>
+                        </li>
+                        <li>Transformación
+                            <ul>
+                                <li>rotate</li>
+                                <li>scale</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Componentes</h2>
+                <p>Pequeña unidad REUTILIZABLE de elemento web que tiene estilos, estructura HTML y funcionalidad (JS)
+                </p>
+                <button class="btn">
+                    <span>Componente botón</span>
+                </button>
+                <button class="btn btn-azul">
+                    <span>Otro Componente botón</span>
+                </button>
+                <button class="btn-red">
+                    <span>Otro Componente botón</span>
+                </button>
+        </section>
     </main>
-
-    <script>
-        const button = document.querySelector(".dropdown-container button");
-        const ul = document.querySelector(".dropdown-container ul");
-
-        let ulOculto = true;
-
-        button.addEventListener("click", () => {
-            ul.style.display = ulOculto ? "block" : "none";
-            setTimeout(() => {
-                ul.classList.toggle("fade-in");
-            }, 0.2);
-            ulOculto = !ulOculto;
-        })
-    </script>
 </body>
 
 </html>

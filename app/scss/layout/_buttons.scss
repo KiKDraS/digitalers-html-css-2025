@@ -1,0 +1,13 @@
+.btn {
+  padding: 8px;
+}
+
+.btn-azul {
+  background-color: blue;
+  color: white;
+}
+
+.btn-red {
+  @extend .btn;
+  background-color: red;
+}
