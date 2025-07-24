@@ -1,8 +1,0 @@
-@forward "globals"; /*@forward = @import de CSS para partials*/
-@forward "layout";
-
-/*
-  Archivo "Punto de entrada"
-    -> Es el que lee el compilador de Sass
-    -> Todos los archivos importados acá son leídos
-*/

@@ -1,0 +1,63 @@
+:root {
+    color-scheme: light dark;
+
+    /* Colores personalizados para light mode (tema claro)  */
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #f8f9fa;
+    --footer-bg: #212529;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colores personalizados para dark mode (tema oscuro)  */
+        --primary-color: #0d6efd;
+        --secondary-color: #adb5bd;
+        --background-color: #212529;
+        --text-color: #f8f9fa;
+        --card-bg: #2c3034;
+        --footer-bg: #121416;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Asegurar que los inputs y textarea sigan el color scheme */
+input,
+textarea,
+select {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modificamos estilos de la clase text-primary de Bootstrap (Importante el orden de lectura) */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-bg: var(--primary-color);
+    --bs-btn-hover-border-color: var(--primary-color);
+    --bs-btn-active-bg: var(--primary-color);
+    --bs-btn-active-border-color: var(--primary-color);
+    --bs-btn-disabled-color: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
+}

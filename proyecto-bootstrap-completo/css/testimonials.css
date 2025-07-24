@@ -1,0 +1,22 @@
+#testimonials {
+    background-color: var(--card-bg) !important;
+}
+
+.testimonial-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(50%);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(90%);
+    }
+}
